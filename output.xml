@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.10.0 on win32)" generated="20211103 01:10:33.017" rpa="false" schemaversion="2">
+<suite id="s1" name="Exo Ausy" source="C:\Users\hdf-msi\Documents\GitHub\exo-ausy\exo_ausy.robot">
+<test id="s1-t1" name="Google Index">
+<kw name="Connexion au site de Randstad">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211103 01:10:33.220" level="INFO">Opening browser 'chrome' to base url 'http://www.randstad.fr/'.</msg>
+<status status="PASS" starttime="20211103 01:10:33.220" endtime="20211103 01:10:36.861"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211103 01:10:36.861" endtime="20211103 01:10:37.053"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211103 01:10:39.066" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20211103 01:10:37.053" endtime="20211103 01:10:39.067"/>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<arg>onetrust-reject-all-handler</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211103 01:10:39.067" level="INFO">Clicking button 'onetrust-reject-all-handler'.</msg>
+<status status="PASS" starttime="20211103 01:10:39.067" endtime="20211103 01:10:39.203"/>
+</kw>
+<status status="PASS" starttime="20211103 01:10:33.220" endtime="20211103 01:10:39.203"/>
+</kw>
+<kw name="Recherche sur le site">
+<kw name="Click Element" library="Selenium2Library">
+<arg>//span[@class='label']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211103 01:10:39.204" level="INFO">Clicking element '//span[@class='label']'.</msg>
+<status status="PASS" starttime="20211103 01:10:39.204" endtime="20211103 01:10:39.650"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>//li[text()='Bretagne']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211103 01:10:39.651" level="INFO">Clicking element '//li[text()='Bretagne']'.</msg>
+<status status="PASS" starttime="20211103 01:10:39.650" endtime="20211103 01:10:39.722"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>//input[@class='job ac ac-job']</arg>
+<arg>${search}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211103 01:10:39.722" level="INFO">Typing text 'boulanger' into text field '//input[@class='job ac ac-job']'.</msg>
+<status status="PASS" starttime="20211103 01:10:39.722" endtime="20211103 01:10:39.880"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>//span[@class='icon icon-arrow-right8']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211103 01:10:39.880" level="INFO">Clicking element '//span[@class='icon icon-arrow-right8']'.</msg>
+<status status="PASS" starttime="20211103 01:10:39.880" endtime="20211103 01:10:41.591"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>//a[contains(text(), 'BOULANGER')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211103 01:10:41.592" level="INFO">Clicking element '//a[contains(text(), 'BOULANGER')]'.</msg>
+<status status="PASS" starttime="20211103 01:10:41.591" endtime="20211103 01:10:44.663"/>
+</kw>
+<kw name="Scroll Element Into View" library="Selenium2Library">
+<arg>//h3[text()='informations complémentaires']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20211103 01:10:44.663" endtime="20211103 01:10:44.979"/>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<arg>Verification.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211103 01:10:45.133" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Verification.png"&gt;&lt;img src="Verification.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211103 01:10:44.979" endtime="20211103 01:10:45.133"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211103 01:10:47.145" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20211103 01:10:45.134" endtime="20211103 01:10:47.145"/>
+</kw>
+<status status="PASS" starttime="20211103 01:10:39.204" endtime="20211103 01:10:47.145"/>
+</kw>
+<kw name="Verification que le niveau d'etude est present">
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>niveau d'études</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211103 01:10:47.161" level="INFO">Current page contains text 'niveau d'études'.</msg>
+<status status="PASS" starttime="20211103 01:10:47.145" endtime="20211103 01:10:47.161"/>
+</kw>
+<status status="PASS" starttime="20211103 01:10:47.145" endtime="20211103 01:10:47.161"/>
+</kw>
+<kw name="Verification que le salaire minimum est present">
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>salaire minimum</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211103 01:10:47.176" level="INFO">Current page contains text 'salaire minimum'.</msg>
+<status status="PASS" starttime="20211103 01:10:47.161" endtime="20211103 01:10:47.176"/>
+</kw>
+<status status="PASS" starttime="20211103 01:10:47.161" endtime="20211103 01:10:47.176"/>
+</kw>
+<kw name="Verification que le type de salaire est present">
+<kw name="Page Should Contain" library="Selenium2Library">
+<arg>type de salaire</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20211103 01:10:47.208" level="INFO">Current page contains text 'type de salaire'.</msg>
+<status status="PASS" starttime="20211103 01:10:47.176" endtime="20211103 01:10:47.208"/>
+</kw>
+<status status="PASS" starttime="20211103 01:10:47.176" endtime="20211103 01:10:47.208"/>
+</kw>
+<status status="PASS" starttime="20211103 01:10:33.205" endtime="20211103 01:10:47.208"/>
+</test>
+<status status="PASS" starttime="20211103 01:10:33.017" endtime="20211103 01:10:47.208"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Exo Ausy">Exo Ausy</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
